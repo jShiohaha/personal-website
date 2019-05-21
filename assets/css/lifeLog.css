@@ -1,0 +1,238 @@
+/** Ultra Light */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 100;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 200;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 500;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 600;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 700;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+body {
+    margin: 0;
+    font-family: 'San Francisco', sans-serif;
+}
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .site-wrapper {
+        width: 100vw;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .site-wrapper {
+        width: 100vw;
+        margin-left: 10px;
+    }
+}
+
+.site-wrapper p {
+    margin: 10px 0 10px 0;
+}
+
+.site-wrapper p a {
+  color: #000;
+  text-decoration: none;
+  margin-right: 2.5px;
+}
+
+.site-wrapper p a {
+  line-height: 5px;
+  text-decoration: underline;
+  line-height: 20px;
+}
+
+.site-wrapper .header h1 {
+    font-size: 52px;
+    color: #000000;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.tagline {
+    font-size: 15px;
+    margin: 0 0 0 13px;
+    width: 375px;
+}
+
+@media screen and (max-width: 720px) {
+    .site-wrapper .header h1 {
+        font-size: 35px;
+        margin-left: 8px;
+    }
+
+    .tagline {
+        font-size: 13px;
+        margin: 0 0 0 8px;
+        width: 275px;
+    }
+}
+
+.life-log {
+    margin: 0 0 0 10px;
+    height: 100%;
+    width: 750px;
+}
+
+@media screen and (max-width: 720px) {
+    .life-log {
+        width: 335px;
+        margin: 0 0 0 18px;
+    }
+
+    .life-log hr {
+        top: 105px;
+    }
+}
+
+.life-log hr {
+    margin: 25px 0 0 50px;
+    position: absolute;
+    top: 115px;
+    width: 2px;
+    /* height: 1000px; */
+    background: #000000;
+    border: none;
+}
+
+@media screen and (max-width: 720px) {
+    .life-log hr {
+        top: 105px;
+    }
+}
+
+.life-log ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: block;
+}
+
+.life-log ul li {
+    display: inline;
+    line-height: 25px;
+}
+
+.entry {
+    margin: 12px 0;
+}
+
+.year-circle {
+    width: 15px;
+    height: 15px;
+    background: #000000;
+    border-radius: 100%;
+    position: relative;
+    left: 42.5px;
+}
+
+.big-energy-circle,
+.normal-energy-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: relative;
+    left: 45.5px;
+    z-index: 100;
+}
+
+.big-energy-circle {
+    background: #FF0000;
+}
+
+.normal-energy-circle {
+    background: #000000;
+}
+
+.month-and-year {
+    /* position: relative; */
+    margin: -17px 0 0 0;
+}
+
+.month-and-year p {
+    font-size: 22px;
+    color: #8D8D8D;
+    font-weight: 400;
+    margin: 0;
+    right: 10px;
+    position: relative;
+    width: 50px;
+    text-align: right;
+}
+
+.event {
+    /* position: relative; */
+    margin: -25px 0 0 65px;
+}
+
+.year-value {
+    /* position: relative; */
+    margin: -5px 0 5px 30px;
+}
+
+.year-value p {
+    margin: -20px 0 0 -45px;
+    color: #353535;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.visibility-toggle p:hover {
+    color: #000000;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.visibility-toggle p {
+    color: #8D8D8D;
+    margin: -30px 0 5px 65px;
+    width: 25px;
+    text-align: center;
+}
+
+.event p {
+    margin: 0;
+}

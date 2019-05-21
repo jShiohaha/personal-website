@@ -45,23 +45,7 @@ body {
   font-family: 'San Francisco', sans-serif;
 }
 
-.company-header-avatar{
-  width: 150px;
-  height: 150px;
-  -webkit-border-radius: 50%;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 50%;
-  -moz-background-clip: padding;
-  border-radius: 50%;
-  background-clip: padding-box;
-  margin-left: 10px;
-  background-size: cover;
-  background-position: center center;
-}
-
 .headshot {
-  /* border-radius: 50%; */
-  /* height: 150px; */
   width: 350px;
   margin-left: 10px;
 }
@@ -118,7 +102,7 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 15px;
-  margin: -20px 0 30px 10px;
+  margin: 0 0 30px 10px;
 }
 
 .site-wrapper .info .middle {
@@ -127,6 +111,7 @@ body {
 
 .site-wrapper .info .info-item {
   width: 300px;
+  margin: -10px 0 -10px 0;
 }
 
 .site-wrapper .info .info-item:first-child {
@@ -167,8 +152,9 @@ body {
 }
 
 .site-wrapper .info .info-item ul li a, 
-.site-wrapper .info .info-item p a, 
-.site-wrapper .header .tagline a {
+.site-wrapper .info .info-item p a,
+.site-wrapper .info p a, 
+.site-wrapper .header p a {
   color: #000;
   text-decoration: none;
   margin-right: 2.5px;
@@ -176,7 +162,8 @@ body {
 
 .site-wrapper .info .info-item ul li span,
 .site-wrapper .info .info-item p span,
-.site-wrapper .header .tagline span {
+.site-wrapper .info p span,
+.site-wrapper .header p span {
   line-height: 5px;
   text-decoration: underline;
   line-height: 20px;
