@@ -28,3 +28,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# python
+__pycache__/
+client_secret.json
