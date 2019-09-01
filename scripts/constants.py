@@ -13,7 +13,7 @@ G_SHEETS_DATE_FORMAT = '%m/%d/%Y'
 ISO_DATE_FORMAT = "%Y-%m-%dT%H:%M:%S"
 
 # CONSTANTS FOR UPDATING LIFELOG HTML CONTENT
-LIFE_LOG_FILENAME = "../html/lifeLog.html"
+LIFE_LOG_FILENAME = "../pages/lifeLog.html"
 BIG_ENERGY_CIRCLE_CLASSNAME = "big-energy-circle"
 NORMAL_ENERGY_CIRCLE_CLASSNAME = "normal-energy-circle"
 

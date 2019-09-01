@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="../assets/css/lifeLog.minified.css" rel="stylesheet" type="text/css" /> 
+    <title >Jacob Shiohira - Life Log
+    </title> 
+    <link rel="shortcut icon" href="../jshiohaha.ico" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+<body data-gr-c-s-loaded="true" class="vsc-initialized" cz-shortcut-listen="true">
+    <div class="site-wrapper">
+        <p>>> <a href="../index.html"><span>H O M E</span></a></p>
+        <div class="header">
+            <h1>Life Log</h1>
+        </div>
+        <div class="life-log">
+            <ul class="life-log-ul">
+                <li class="life-log-list-element">
+                    <!-- years and events go here -->
+                </li>
+            </ul>
+            <hr id="life-log-line"/>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" >
+        let lifeLogLineOffset = $(".life-log hr").offset().top;
+        let SMALL_SCREEN_VERTICAL_OFFSET = 25;
+        let BIG_SCREEN_VERTICAL_OFFSET = 65;
+        
+        var lifeLogTopMarginOffset = SMALL_SCREEN_VERTICAL_OFFSET;
+        $( document ).ready(function() {
+          $(".life-log hr").css("height", getHtmlHeight());
+        
+          // add event listener to the visibility-toggle-text to avoid a double click to activate
+          Array.from(document.getElementsByClassName("visibility-toggle-text")).forEach(element => {
+            element.addEventListener("click", toggleEventVisibility.bind(element));            
+          }, false);     
+        });
+        
+        var toggleEventVisibility = function(element) {
+            var currentElement = element.currentTarget;
+            var toggleStatus = currentElement.innerText;
+
+            var yearContainer = currentElement.parentNode.parentNode.parentNode;
+            var eventList = yearContainer.children[1];
+            
+            if (toggleStatus == "Hide") {
+                console.log("hiding element...");
+                $(eventList).css("display", "none");
+                currentElement.innerText = "Show";
+            } else {
+                console.log("showing element...");
+
+                $(eventList).css("display", "block");
+                currentElement.innerText = "Hide";
+            }
+
+            $(".life-log hr").css("height", getHtmlHeight());
+        }
+
+        let getHtmlHeight = function() {
+          // two cases:
+          // 1. line is shorter than client height
+          // 2. line is longer than client height
+          var body = document.body,
+          html = document.documentElement;
+          var windowHeight = $( window ).height();
+
+          var height = Math.max(body.scrollHeight, windowHeight);
+
+          if (body.scrollHeight > windowHeight) {
+            lifeLogTopMarginOffset = BIG_SCREEN_VERTICAL_OFFSET;
+          } else {
+            lifeLogTopMarginOffset = SMALL_SCREEN_VERTICAL_OFFSET;
+          }
+
+          return (height - lifeLogLineOffset + lifeLogTopMarginOffset);
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
