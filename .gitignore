@@ -32,6 +32,7 @@ Temporary Items
 # python
 __pycache__/
 client_secret.json
+venv/
 
 # Misc directories
 pages/oldold_copies/*
